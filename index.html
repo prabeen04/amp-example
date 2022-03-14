@@ -111,7 +111,7 @@ An AMP HTML tutorial - learn the different building blocks of an AMP HTML file. 
     Check out the [other examples](/documentation/examples/) to learn more about AMP.
   -->
     <amp-img
-      src="/static/samples/img/amp.jpg"
+      src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
       width="1080"
       height="610"
       layout="responsive"
@@ -176,5 +176,29 @@ An AMP HTML tutorial - learn the different building blocks of an AMP HTML file. 
       optio iure repellendus dignissimos cupiditate sapiente mollitia dolorem,
       quas ab.
     </p>
+    <script
+      async
+      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ></script>
+    <script>
+      window.googletag = window.googletag || { cmd: [] };
+      var interstitialSlot;
+      googletag.cmd.push(function () {
+        interstitialSlot = googletag
+          .defineOutOfPageSlot(
+            "/22387492205,9206322/Test_OOP",
+            googletag.enums.OutOfPageFormat.INTERSTITIAL
+          )
+          .addService(googletag.pubads());
+        googletag.pubads().addEventListener("slotOnload", function (event) {
+          if (interstitialSlot === event.slot) {
+            document.style.display = "block";
+          }
+        });
+        googletag.pubads().set("page_url", "galatta.com");
+        googletag.enableServices();
+        googletag.display(interstitialSlot);
+      });
+    </script>
   </body>
 </html>
