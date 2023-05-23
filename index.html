@@ -233,8 +233,8 @@
         window.addEventListener(
           "message",
           (e) => {
-            console.log(e);
-            console.log(e.data);
+            // console.log(e);
+            // console.log(e.data);
             console.log(e.data && e.data.AMP_SCRIPT); // Check if e.data is defined before accessing the property
 
             if (!e.data.AMP_SCRIPT) return;
@@ -282,13 +282,13 @@
     <!-- <script type="text/plain" target="amp-script" id="webSocketDemo">
      
     </script> -->
-    <amp-ad
+    <!-- <amp-ad
       width="300"
       height="250"
       type="doubleclick"
       data-slot="/22387492205,1068322/ndtv.in.Banner0.1670924715"
     >
-    </amp-ad>
+    </amp-ad> -->
     <!-- <amp-ad
       width="1"
       height="1"
@@ -296,7 +296,7 @@
       data-slot="/22387492205/unemployed.engineer_GGINT_Test_1x1"
     >
     </amp-ad> -->
-    <amp-iframe
+    <!-- <amp-iframe
       width="300"
       height="100"
       sandbox="allow-scripts allow-same-origin"
@@ -304,16 +304,16 @@
       frameborder="0"
       src="/iframe.html"
     >
-    </amp-iframe>
-    <!-- <amp-iframe
+    </amp-iframe> -->
+    <amp-iframe
       width="200"
       height="100"
       sandbox="allow-scripts allow-same-origin"
       layout="responsive"
       frameborder="0"
-      src="http://localhost:5500/iframee.html"
+      src="https://unemployed.engineer/iframe.html"
     >
-    </amp-iframe> -->
+    </amp-iframe>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
       Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
