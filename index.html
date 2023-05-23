@@ -1,49 +1,42 @@
-<!--
-## Introduction
-
-An AMP HTML tutorial - learn the different building blocks of an AMP HTML file. AMP HTML is entirely built on existing web technologies. It achieves reliable performance by restricting some parts of HTML, CSS and JavaScript. To make up for those limitations AMP HTML defines a set of custom elements for rich content beyond basic HTML. This samples shows what's necessary to create a valid AMP HTML file.
--->
-<!-- -->
-<!-- Doctype declaration is required. -->
 <!DOCTYPE html>
-<!-- This tells everyone that this is an AMP file. `<html amp>` works too. -->
-<html ⚡ lang="en">
-  <!-- ## Head -->
-  <!-- -->
+<html amp lang="en">
   <head>
-    <!-- The charset definition must be the first child of the `<head>` tag. -->
     <meta charset="utf-8" />
-    <title>AMP Example</title>
-    <!-- The AMP runtime must be loaded as the second child of the `<head>` tag.-->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script
+      async
+      custom-element="amp-base-carousel"
+      src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-base-carousel"
+      src="https://cdn.ampproject.org/v0/amp-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    ></script>
+    <script
+      async
+      custom-element="amp-script"
+      src="https://cdn.ampproject.org/v0/amp-script-0.1.js"
+    ></script>
     <script
       async
       custom-element="amp-ad"
       src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
     ></script>
-
-    <!--
-    AMP HTML files require a canonical link pointing to the regular HTML. If no HTML version exists, it should point to itself.
-  -->
+    <title>Hello, AMPs</title>
     <link
       rel="canonical"
-      href="https://amp.dev/documentation/examples/introduction/hello_world/index.html"
+      href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/"
     />
-    <!--
-    AMP HTML files require a viewport declaration. It's recommended to include initial-scale=1.
-  -->
-    <meta name="viewport" content="width=device-width" />
-    <!--
-    CSS must be embedded inline.
-  -->
-    <style amp-custom>
-      h1 {
-        color: red;
-      }
-    </style>
-    <!--
-    The AMP boilerplate.
-  -->
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
     <style amp-boilerplate>
       body {
         -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -102,137 +95,250 @@ An AMP HTML tutorial - learn the different building blocks of an AMP HTML file. 
         }
       </style></noscript
     >
+    <style amp-custom>
+      h1 {
+        margin: 1rem;
+        color: goldenrod;
+      }
+      body {
+        background-color: rgb(247, 242, 242);
+      }
+      .ad-frame {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background: teal;
+      }
+      #ad-container {
+        min-height: 10px;
+        border: 1px solid goldenrod;
+      }
+    </style>
   </head>
-  <!-- ## Body -->
-  <!-- -->
   <body>
-    <!--
-    Most HTML tags can be used directly in AMP HTML.
-  -->
+    <h1 id="hello">Amp Heading</h1>
+    <button id="hello-url">Click</button>
+    <amp-base-carousel width="600" height="400" layout="responsive">
+      <amp-img
+        src="https://source.unsplash.com/Ji_G7Bu1MoM/600x400"
+        width="600"
+        height="400"
+        layout="responsive"
+      ></amp-img>
+      <amp-img
+        src="https://source.unsplash.com/4yCXNMLP9g8/600x400"
+        width="600"
+        height="400"
+        layout="responsive"
+      ></amp-img>
+    </amp-base-carousel>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <!-- <div id="ad-container"></div> -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
+    </p>
+    <!-- <amp-script src="./test.js" width="300" height="100">
+      <p>A single line of text</p>
+    </amp-script> -->
+    <!-- src="http://localhost:5500/test.js" -->
+    <!-- <amp-script width="3" height="3" src="http://localhost:5500/test.js">
+      <script>
+        console.log("test2.js");
+
+        // window.addEventListener(
+        //   "message",
+        //   (e) => {
+        //     console.log(e);
+        //     console.log(e.data);
+        //     console.log(e.data && e.data.AMP_SCRIPT); // Check if e.data is defined before accessing the property
+
+        //     if (!e.data.AMP_SCRIPT) return;
+        //     console.log("agjahskgjsdh");
+        //     const apiKey = "123";
+        //     const elem = document.createElement("div");
+        //     let gptDivId = `gpt-passback-${apiKey}`;
+        //     elem.setAttribute("id", gptDivId);
+        //     elem.innerHTML = `<h1 id=${gptDivId} class="">IUYUBJKJJLK</h1>`;
+        //     // try {
+            //   let gptScript = document.createElement("script");
+            //   gptScript.async = true;
+            //   gptScript.src =
+            //     "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+            //   document.body.appendChild(gptScript);
+
+            //   window.googletag = window.googletag || { cmd: [] };
+            //   googletag.cmd.push(function () {
+            //     googletag
+            //       .defineSlot(
+            //         "/22387492205,1068322/ndtv.in.Banner0.1670924715",
+            //         [
+            //           [250, 250],
+            //           [300, 250],
+            //           [320, 280],
+            //           [336, 280],
+            //           [360, 300],
+            //         ],
+            //         gptDivId
+            //       )
+            //       .addService(googletag.pubads());
+            //     googletag.enableServices();
+            //     googletag.display(gptDivId);
+            //   });
+            // } catch (error) {
+            //   console.error("error >>", error);
+            // }
+
+            document.body.appendChild(elem);
+          },
+          false
+        );
+      </script>
+    </amp-script> -->
+    <!-- <script type="text/plain" target="amp-script" id="webSocketDemo">
+     
+    </script> -->
     <amp-ad
       width="300"
       height="250"
-      type="aniview"
-      data-publisherid="623c11e87d2d1308f339a8f8"
-      data-channelid="623c127c0e3a1548182acabd"
-      data-preloader='{"type":"content","link" : "https://play.aniview.com/6229e046286f660f8b1f0456/623b63470c7f161c955dffe7/Culture.mp4"}'
-      data-slot="/22387492205,22654642060/cinereporters.com.Video0.1648103766"
-      data-multi-size="640x480,640x360,400x300,320x180,300x250"
+      type="doubleclick"
+      data-slot="/22387492205,1068322/ndtv.in.Banner0.1670924715"
     >
     </amp-ad>
-
-    <h1>AMP Page</h1>
-    <!--
-    Certain tags, such as the `<img>` tag, are replaced with equivalent or slightly enhanced custom AMP HTML tags (see [HTML Tags in the specification](https://github.com/ampproject/amphtml/blob/main/docs/spec/amp-html-format.md)). You can use the [AMP Validator](/documentation/guides-and-tutorials/learn/validation-workflow/validate_amp) to check
-    if your AMP HTML file is valid AMP HTML. Simply add `#development=1` to an AMP URL. Validation errors will be printed in the Javascript console. You can try it with this website which is built with AMP.
-
-    Check out the [other examples](/documentation/examples/) to learn more about AMP.
-  -->
-    <amp-img
-      src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
-      width="1080"
-      height="610"
+    <!-- <amp-ad
+      width="1"
+      height="1"
+      type="doubleclick"
+      data-slot="/22387492205/unemployed.engineer_GGINT_Test_1x1"
+    >
+    </amp-ad> -->
+    <!-- <amp-iframe
+      width="3"
+      height="3"
+      sandbox="allow-scripts allow-same-origin"
       layout="responsive"
-    ></amp-img>
-    <h2>AMP Heading</h2>
+      frameborder="0"
+      src="http://localhost:5501/index.html"
+    >
+    </amp-iframe> -->
+    <!-- <amp-iframe
+      width="200"
+      height="100"
+      sandbox="allow-scripts allow-same-origin"
+      layout="responsive"
+      frameborder="0"
+      src="http://localhost:5500/iframee.html"
+    >
+    </amp-iframe> -->
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, deleniti
-      aliquid? Tenetur in omnis accusamus officia magnam pariatur. Eligendi ut
-      optio iure repellendus dignissimos cupiditate sapiente mollitia dolorem,
-      quas ab.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
     </p>
-    <h2>AMP Heading</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, deleniti
-      aliquid? Tenetur in omnis accusamus officia magnam pariatur. Eligendi ut
-      optio iure repellendus dignissimos cupiditate sapiente mollitia dolorem,
-      quas ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-      deleniti aliquid? Tenetur in omnis accusamus officia magnam pariatur.
-      Eligendi ut optio iure repellendus dignissimos cupiditate sapiente
-      mollitia dolorem, quas ab. Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Ea, deleniti aliquid? Tenetur in omnis accusamus officia
-      magnam pariatur. Eligendi ut optio iure repellendus dignissimos cupiditate
-      sapiente mollitia dolorem, quas ab.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
     </p>
-    <h2>AMP Heading</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, deleniti
-      aliquid? Tenetur in omnis accusamus officia magnam pariatur. Eligendi ut
-      optio iure repellendus dignissimos cupiditate sapiente mollitia dolorem,
-      quas ab.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
+      Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
+      excepturi aut odit expedita minus incidunt, provident autem perferendis
+      tenetur sequi ut.
     </p>
-    <h2>AMP Heading</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, deleniti
-      aliquid? Tenetur in omnis accusamus officia magnam pariatur. Eligendi ut
-      optio iure repellendus dignissimos cupiditate sapiente mollitia dolorem,
-      quas ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-      deleniti aliquid? Tenetur in omnis accusamus officia magnam pariatur.
-      Eligendi ut optio iure repellendus dignissimos cupiditate sapiente
-      mollitia dolorem, quas ab. Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Ea, deleniti aliquid? Tenetur in omnis accusamus officia
-      magnam pariatur. Eligendi ut optio iure repellendus dignissimos cupiditate
-      sapiente mollitia dolorem, quas ab. Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Ea, deleniti aliquid? Tenetur in omnis accusamus officia
-      magnam pariatur. Eligendi ut optio iure repellendus dignissimos cupiditate
-      sapiente mollitia dolorem, quas ab. Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Ea, deleniti aliquid? Tenetur in omnis accusamus officia
-      magnam pariatur. Eligendi ut optio iure repellendus dignissimos cupiditate
-      sapiente mollitia dolorem, quas ab.
-    </p>
-    <h2>AMP Heading</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, deleniti
-      aliquid? Tenetur in omnis accusamus officia magnam pariatur. Eligendi ut
-      optio iure repellendus dignissimos cupiditate sapiente mollitia dolorem,
-      quas ab.
-    </p>
-    <h2>AMP Heading</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, deleniti
-      aliquid? Tenetur in omnis accusamus officia magnam pariatur. Eligendi ut
-      optio iure repellendus dignissimos cupiditate sapiente mollitia dolorem,
-      quas ab.
-    </p>
-    <!-- <script
-      async
-      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
-    ></script> -->
-    <div id="gpt-passback">
-      <script>
-        window.googletag = window.googletag || { cmd: [] };
-        googletag.cmd.push(function () {
-          googletag
-            .defineSlot(
-              "/22387492205/unemployed.engineer-1x1",
-              [1, 1],
-              "gpt-passback"
-            )
-            .addService(googletag.pubads());
-          googletag.enableServices();
-          googletag.display("gpt-passback");
-        });
-      </script>
-    </div>
-    <!-- <script
-      async
-      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
-    ></script> -->
-    <div id="gpt-passback-interstitial">
-      <script>
-        window.googletag = window.googletag || { cmd: [] };
-        googletag.cmd.push(function () {
-          googletag
-            .defineSlot(
-              "/22387492205/INT_1x1",
-              [1, 1],
-              "gpt-passback-interstitial"
-            )
-            .addService(googletag.pubads());
-          googletag.enableServices();
-          googletag.display("gpt-passback-interstitial");
-        });
-      </script>
-    </div>
   </body>
 </html>
