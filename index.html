@@ -225,10 +225,8 @@
       excepturi aut odit expedita minus incidunt, provident autem perferendis
       tenetur sequi ut.
     </p>
-    <amp-script src="./test.js" width="300" height="100">
-      <p>A single line of text</p>
-    </amp-script>
-    <amp-script width="3" height="3" src="http://localhost:5500/test.js">
+
+    <amp-script width="3" height="3" src="test.js">
       <script>
         console.log("test2.js");
 
@@ -245,7 +243,7 @@
             const elem = document.createElement("div");
             let gptDivId = `gpt-passback-${apiKey}`;
             elem.setAttribute("id", gptDivId);
-            elem.innerHTML = `<h1 id=${gptDivId} class="">IUYUBJKJJLK</h1>`;
+            // elem.innerHTML = `<h1 id=${gptDivId} class="">IUYUBJKJJLK</h1>`;
             try {
               let gptScript = document.createElement("script");
               gptScript.async = true;
@@ -298,15 +296,15 @@
       data-slot="/22387492205/unemployed.engineer_GGINT_Test_1x1"
     >
     </amp-ad> -->
-    <!-- <amp-iframe
-      width="3"
-      height="3"
+    <amp-iframe
+      width="300"
+      height="100"
       sandbox="allow-scripts allow-same-origin"
       layout="responsive"
       frameborder="0"
-      src="http://localhost:5501/index.html"
+      src="/iframe.html"
     >
-    </amp-iframe> -->
+    </amp-iframe>
     <!-- <amp-iframe
       width="200"
       height="100"
