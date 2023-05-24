@@ -99,26 +99,6 @@
       body {
         background-color: rgb(247, 242, 242);
       }
-      .ad-frame {
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        background: teal;
-      }
-      #ad-container {
-        min-height: 10px;
-        border: 1px solid goldenrod;
-      }
-      .iframe-ad {
-        border: 4px solid green;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: calc(100% - 8px);
-        background: goldenrod;
-        z-index: 23432;
-      }
     </style>
   </head>
   <body>
@@ -215,7 +195,6 @@
       excepturi aut odit expedita minus incidunt, provident autem perferendis
       tenetur sequi ut.
     </p>
-    <!-- <div id="ad-container"></div> -->
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
       Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
@@ -235,96 +214,14 @@
       tenetur sequi ut.
     </p>
 
-    <amp-script width="3" height="3" src="test.js">
-      <script>
-        console.log("test2.js");
-
-        window.addEventListener(
-          "message",
-          (e) => {
-            // console.log(e);
-            // console.log(e.data);
-            console.log(e.data && e.data.AMP_SCRIPT); // Check if e.data is defined before accessing the property
-
-            if (!e.data.AMP_SCRIPT) return;
-            console.log("agjahskgjsdh");
-            const apiKey = "123";
-            const elem = document.createElement("div");
-            let gptDivId = `gpt-passback-${apiKey}`;
-            elem.setAttribute("id", gptDivId);
-            // elem.innerHTML = `<h1 id=${gptDivId} class="">IUYUBJKJJLK</h1>`;
-            try {
-              let gptScript = document.createElement("script");
-              gptScript.async = true;
-              gptScript.src =
-                "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-              document.body.appendChild(gptScript);
-
-              window.googletag = window.googletag || { cmd: [] };
-              googletag.cmd.push(function () {
-                googletag
-                  .defineSlot(
-                    "/22387492205,1068322/ndtv.in.Banner0.1670924715",
-                    [
-                      [250, 250],
-                      [300, 250],
-                      [320, 280],
-                      [336, 280],
-                      [360, 300],
-                    ],
-                    gptDivId
-                  )
-                  .addService(googletag.pubads());
-                googletag.enableServices();
-                googletag.display(gptDivId);
-              });
-            } catch (error) {
-              console.error("error >>", error);
-            }
-
-            document.body.appendChild(elem);
-          },
-          false
-        );
-      </script>
+    <amp-script width="1" height="1" script="ad_render" id="amp-script-id">
     </amp-script>
-    <!-- <script type="text/plain" target="amp-script" id="webSocketDemo">
-     
-    </script> -->
-    <!-- <amp-ad
-      width="300"
-      height="250"
-      type="doubleclick"
-      data-slot="/22387492205,1068322/ndtv.in.Banner0.1670924715"
-    >
-    </amp-ad> -->
-    <!-- <amp-ad
-      width="1"
-      height="1"
-      type="doubleclick"
-      data-slot="/22387492205/unemployed.engineer_GGINT_Test_1x1"
-    >
-    </amp-ad> -->
-    <!-- <amp-iframe
-      width="300"
-      height="100"
-      sandbox="allow-scripts allow-same-origin"
-      layout="responsive"
-      frameborder="0"
-      src="/iframe.html"
-    >
-    </amp-iframe> -->
-    <div class="iframe-ad">
-      <amp-iframe
-        width="200"
-        height="100"
-        sandbox="allow-scripts allow-same-origin"
-        layout="responsive"
-        frameborder="0"
-        src="https://unemployed.engineer/iframe.html"
-      >
-      </amp-iframe>
-    </div>
+    <script
+      type="text/javascript"
+      src="https://storage.googleapis.com/console-dev/raw/1684923947168/ad_render.js"
+      id="ad_render"
+      target="amp-script"
+    ></script>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quae.
       Ipsum asperiores assumenda quam, velit dolores reiciendis repellendus
@@ -345,3 +242,12 @@
     </p>
   </body>
 </html>
+<!-- <amp-iframe
+          layout="responsive"
+          height="1"
+          width="1"
+          sandbox="allow-scripts allow-same-origin"
+          frameborder="0"
+          src="https://unemployed.engineer/iframe.html"
+        >
+        </amp-iframe> -->
